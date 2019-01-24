@@ -5,11 +5,12 @@ let label='model loading...';
 //let results;
 
 
+
 //setup function
 function setup()
 {
     //create canvas
-    createCanvas(640,480);
+    createCanvas(1000,1000);
     //imitialize the webcam stream in a object
     video=createCapture(VIDEO);
     //hide the webcam stream
@@ -52,7 +53,13 @@ function draw()
   image(video,0,0);
 
   //setting up text label 
-    textSize(32);
+    textSize(16);
     fill(255,140,0);
     text(label,10,450);
+
+    let list = ['food', 'phone', 'water', 'abaya'];
+    for (i = 0; i < list.length ; i++) {
+        text(list[i], 700, 50 + 50 * i);
+    }
+    
 }
